@@ -1,0 +1,248 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>أين أذهب؟</title>
+</head>
+<body style="font-family: Arial; text-align: center; direction: rtl;">
+  <h1>مرحبًا بك في موقع "أين أذهب؟"</h1>
+  <p>كيف هو مزاجك اليوم؟</p>
+  <select id="mood">
+  <option value="">🧠 اختر شعورك</option>
+  <option value="سعيد">😊 سعيد</option>
+  <option value="حزين">😢 حزين</option>
+  <option value="غاضب">😠 غاضب</option>
+  <option value="مكتئب">😞 مكتئب</option>
+  <option value="قلق">😰 قلق</option>
+  <option value="مرهق">😫 مرهق</option>
+  <option value="متوتر">😬 متوتر</option>
+  <option value="هادئ">😌 هادئ</option>
+  <option value="متحمس">🤩 متحمس</option>
+  <option value="خائف">😨 خائف</option>
+  <option value="واثق">😎 واثق</option>
+  <option value="محبط">🙁 محبط</option>
+  <option value="مرتاح">😇 مرتاح</option>
+  <option value="مشتت">🤯 مشتت</option>
+  <option value="مندهش">😲 مندهش</option>
+<option value="وحيد">😔 وحيد</option>
+<option value="مكسور">💔 مكسور</option>
+<option value="مرتبك">😕 مرتبك</option>
+<option value="ممتن">🙏 ممتن</option>
+<option value="محبوب">❤️ محبوب</option>
+<option value="خجول">😳 خجول</option>
+<option value="نشيط">⚡ نشيط</option>
+<option value="مسترخ">🧘‍♂️ مسترخ</option>
+<option value="محفز">🔥 محفز</option>
+<option value="مظلوم">😤 مظلوم</option>
+<option value="غير مهتم">😐 غير مهتم</option>
+<option value="يائس">😩 يائس</option>
+<option value="فخور">🏆 فخور</option>
+<option value="متسامح">🤝 متسامح</option>
+<option value="عاطفي">🥺 عاطفي</option>
+```
+    
+  </select>
+
+  <p>ما نوع النشاط الذي تفضله؟</p>
+  <select id="activity">
+    ```html
+
+    <option value="خارجي">خارجي</option>
+    <option value="داخلي">داخلي</option>
+    <option value="ثقافي">ثقافي</option>
+    <option value="رياضي">رياضي</option>
+    <option value="اجتماعي">اجتماعي</option>
+    <option value="استرخاء">استرخاء</option>
+    <option value="مغامرة">مغامرة</option>
+    <option value="تعليمي">تعليمي</option>
+    <option value="ترفيهي">ترفيهي</option>
+<option value="رياضي">رياضي</option>
+<option value="فني">فني</option>
+<option value="موسيقي">موسيقي</option>
+<option value="كاتب">كاتب</option>
+<option value="قاريء">قاريء</option>
+<option value="مغامر">مغامر</option>
+<option value="رحّال">رحّال</option>
+<option value="محب للطبيعة">محب للطبيعة</optin>
+<option value="محب للطبخ">محب للطبخ</option>
+<option value="مهووس بالألعاب">مهووس بالألعاب</option>
+<option value="مصمم">مصمم</option>
+<option value="مفكر">مفكر</option>
+<option value="محلل">محلل</option>
+<option value="صانع محتوى">صانع محتوى</option>
+<option value="مصور">مصور</option>
+<option value="مبدع يدوي">مبدع يدوي</option>
+<option value="مشارك اجتماعي">مشارك اجتماعي</option>
+<option value="محب للهدوء">محب للهدوء</option>
+```
+    
+  </select>
+
+  <br><br>
+  <button onclick="suggest()">اقترح لي مكان</button>
+
+  <p id="result" style="margin-top: 100px; font-weight: bold;"></p>
+<div id="suggestion-box" style="display: none;">
+  <p id="suggestion"></p>
+</div>
+الموقع قيد التطوير 
+
+
+  <script>
+    function suggest() {
+      let mood = document.getElementById("mood").value;
+let activity = document.getElementById("activity").value;
+      let result = "";
+      
+if (mood === "سعيد" && activity === "خارجي") result = "اذهب إلى نزهة أو مقهى في الهواء الطلق!";
+else if (mood === "حزين" && activity === "ثقافي") result = "زر مكتبة هادئة أو معرض فني.";
+else if (mood === "متوتر" && activity === "رياضي") result = "جرب الجري أو ركوب الدراجة!";
+else if (mood === "مكتئب" && activity === "اجتماعي") result = "التقِ بأصدقائك أو شارك في نشاط جماعي.";
+else if (mood === "غاضب" && activity === "رياضي") result = "مارس تمارين القوة أو الملاكمة لتفريغ الطاقة.";
+else if (mood === "مرتاح" && activity === "داخلي") result = "شاهد فيلماً هادئاً أو اقرأ كتاباً.";
+else if (mood === "قلق" && activity === "استرخاء") result = "جرّب التأمل أو جلسة استرخاء في مكان هادئ.";
+else if (mood === "سعيد" && activity === "مغامرة") result = "اذهب في تجربة جديدة، مثل تسلق أو استكشاف مكان.";
+else if (mood === "فضولي" && activity === "تعليمي") result = "سجّل في ورشة عمل أو شاهد دورة تعليمية.";
+else if (mood === "ممل" && activity === "ترفيهي") result = "شاهد عرضاً كوميدياً أو اذهب إلى مدينة الملاهي.";
+else if (mood === "وحيد" && activity === "رحّال") result = "قم برحلة قصيرة إلى مكان هادئ لتجديد طاقتك.";
+else if (mood === "متسامح" && activity === "مبدع يدوي") result = "اصنع شيئاً يدوياً يعبر عن مشاعرك.";
+else if (mood === "عاطفي" && activity === "قاريء") result = "اقرأ كتاباً يحرك مشاعرك أو يلامس قلبك.";
+else if (activity === "رياضي") result = "اختر نشاطاً رياضياً يناسب حالتك البدنية وحاول الاستمتاع به.";
+else if (activity === "فني") result = "جرب التعبير الفني كالكتابة، الرسم، أو الموسيقى.";
+else if (activity === "موسيقي") result = "استمع أو عزف موسيقى ترفع من مزاجك.";
+else if (activity === "كاتب") result = "دوّن أفكارك أو ابدأ قصة قصيرة.";
+else if (activity === "قاريء") result = "اقرأ كتاباً أو مقالاً يثير اهتمامك.";
+else if (activity === "مغامر") result = "قم بتجربة شيء جديد وغير متوقع.";
+else if (activity === "رحّال") result = "استكشف مكاناً جديداً في مدينتك أو خارجها.";
+else if (activity === "محب للطبيعة") result = "اذهب إلى الطبيعة للاستجمام والراحة.";
+else if (activity === "محب للطبخ") result = "جرب وصفة جديدة وشاركها مع أصدقائك.";
+else if (activity === "مهووس بالألعاب") result = "ابدأ لعبة جديدة أو العب مع أصدقائك.";
+else if (activity === "مصمم") result = "صمم شيئاً يعبر عن إبداعك، سواء كان رقمي أو يدوي.";
+else if (activity === "مفكر") result = "اقضِ وقتاً في التفكير أو التخطيط لمشاريع مستقبلية.";
+else if (mood === "مكسور" && activity === "فني") result = "جرّب الرسم أو التعبير عن مشاعرك من خلال الفن.";
+else if (mood === "مرتبك" && activity === "مفكر") result = "اكتب أفكارك أو قم بالتأمل.";
+else if (mood === "ممتن" && activity === "مشارك اجتماعي") result = "شارك في عمل تطوعي أو ساعد من حولك.";
+else if (mood === "محبوب" && activity === "اجتماعي") result = "نظم لقاء مع أحبائك أو عائلتك.";
+else if (mood === "خجول" && activity === "كاتب") result = "اكتب خواطرك أو قصة صغيرة.";
+else if (mood === "نشيط" && activity === "رياضي") result = "مارس رياضة مكثفة مثل الجري أو كرة القدم.";
+else if (mood === "مسترخ" && activity === "استرخاء") result = "استمع إلى موسيقى هادئة أو مارس اليوغا.";
+else if (mood === "محفز" && activity === "صانع محتوى") result = "ابدأ بتسجيل فيديو أو كتابة محتوى جديد.";
+else if (mood === "مظلوم" && activity === "محلل") result = "فكر في أسباب مشاعرك واطرح حلولاً عملية.";
+else if (mood === "غير مهتم" && activity === "مهووس بالألعاب") result = "جرب لعبة جديدة أو تحدٍ ممتع.";
+else if (mood === "يائس" && activity === "محب للهدوء") result = "اقضِ وقتاً في مكان هادئ بعيداً عن الضجيج.";
+else if (mood === "فخور" && activity === "مصور") result = "التقط صوراً تبرز إنجازاتك أو جمال الطبيعة.";
+else if (activity === "محلل") result = "حلل وضعك الحالي وفكر بخطوات التطوير.";
+else if (activity === "صانع محتوى") result = "ابدأ في صناعة فيديو أو تدوينة عن موضوع تحبه.";
+else if (activity === "مصور") result = "التقط صوراً فنية لأشياء تحبها.";
+else if (activity === "مبدع يدوي") result = "اصنع أشياء يدوية تُرضي هوايتك.";
+else if (activity === "مشارك اجتماعي") result = "انخرط في نشاط اجتماعي أو تطوعي.";
+else if (activity === "محب للهدوء") result = "اقضِ وقتاً في مكان هادئ بعيداً عن الضوضاء.";
+else if (mood === "سعيد" && activity === "خارجي") result = "اذهب إلى نزهة أو مقهى في الهواء الطلق!";
+      else if (mood === "حزين" && activity === "ثقافي") result = "زر مكتبة هادئة أو معرض فني.";
+      else if (mood === "متوتر" && activity === "رياضي") result = "جرب الجري أو ركوب الدراجة!";
+      else if (mood === "مكتئب" && activity === "اجتماعي") result = "التقِ بأصدقائك أو شارك في نشاط جماعي.";
+      else if (mood === "غاضب" && activity === "رياضي") result = "مارس تمارين القوة أو الملاكمة لتفريغ الطاقة.";
+      else if (mood === "مرتاح" && activity === "داخلي") result = "شاهد فيلماً هادئاً أو اقرأ كتاباً.";
+      else if (mood === "قلق" && activity === "استرخاء") result = "جرّب التأمل أو جلسة استرخاء في مكان هادئ.";
+      else if (mood === "سعيد" && activity === "مغامرة") result = "اذهب في تجربة جديدة، مثل تسلق أو استكشاف مكان.";
+      else if (mood === "فضولي" && activity === "تعليمي") result = "سجّل في ورشة عمل أو شاهد دورة تعليمية.";
+      else if (mood === "ممل" && activity === "ترفيهي") result = "شاهد عرضاً كوميدياً أو اذهب إلى مدينة الملاهي."
+      
+      document.getElementById("result").textContent = result;
+        
+    }
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>أين أذهب؟</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f0f0f0;
+      color: #222;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #007bff;
+    }
+    .place {
+      background: white;
+      margin: 20px auto;
+      padding: 15px;
+      border-radius: 8px;
+      max-width: 400px;
+      box-shadow: 0 0 10px #ccc;
+  
+    }
+    موقع قيد التطوير
+    
+    
+    أكيد! إليك تصميم مختلف أكثر أناقة واحترافية مع استخدام ألوان ناعمة، أزرار متحركة، وتخطيط منظم:
+
+```html
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>مزاجك اليوم</title>
+  <style>
+    body {
+      background-color: #f0f4f8;
+      font-family: 'Segoe UI', sans-serif;
+      direction: rtl;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      color: #222;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    select, button {
+      width: 90%;
+      padding: 12px;
+      margin: 15px 0;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #suggestion {
+      margin-top: 25px;
+      font-weight: bold;
+      color: #333;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    ABDELOUAHED
